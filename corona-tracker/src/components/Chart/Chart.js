@@ -47,7 +47,7 @@ const Chart = () => {
   ) : null;
   console.log(dailyData);
 
-  return lineChart;
+  return <div className={styles.container}>{lineChart}</div>;
 };
 
 export default Chart;
