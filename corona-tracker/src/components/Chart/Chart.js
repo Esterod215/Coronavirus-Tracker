@@ -17,7 +17,6 @@ const Chart = () => {
         console.log(err);
       });
   }, []);
-  console.log(dailyData);
 
   const lineChart = dailyData[0] ? (
     <Line
@@ -45,7 +44,6 @@ const Chart = () => {
       }}
     />
   ) : null;
-  console.log(dailyData);
 
   return <div className={styles.container}>{lineChart}</div>;
 };
