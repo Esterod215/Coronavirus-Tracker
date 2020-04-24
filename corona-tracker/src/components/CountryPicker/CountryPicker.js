@@ -3,7 +3,6 @@ import styles from "./CountryPicker.module.css";
 
 import axios from "axios";
 import { NativeSelect, FormControl } from "@material-ui/core";
-import { StylesContext } from "@material-ui/styles";
 
 const CountryPicker = props => {
   const [countries, setCountries] = useState([]);
@@ -20,7 +19,6 @@ const CountryPicker = props => {
   }, [setCountries]);
 
   const handleChanges = e => {
-    console.log("entered handle chnages", e.target.value);
     props.handleCountryChanges(e.target.value);
   };
 
@@ -31,14 +29,13 @@ const CountryPicker = props => {
 
         {countries.countries
           ? countries.countries.map(country => {
-              console.log("here");
               return (
                 <option key={country.name} value={country.name}>
                   {country.name}
                 </option>
               );
             })
-          : console.log("null")}
+          : null}
       </NativeSelect>
     </FormControl>
   );

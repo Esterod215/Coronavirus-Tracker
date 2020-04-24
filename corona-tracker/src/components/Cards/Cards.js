@@ -9,8 +9,6 @@ import { Card, CardContent, Typography, Grid } from "@material-ui/core";
 import { StylesContext } from "@material-ui/styles";
 
 const Cards = ({ data: { confirmed, deaths, recovered, lastUpdate } }) => {
-  console.log("props", confirmed, deaths, recovered, lastUpdate);
-
   return (
     <div className={StylesContext.container}>
       <Grid container spacing={3} justify="center">
